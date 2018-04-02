@@ -22,7 +22,7 @@ def sum_rec(Pu, Pl,S):
             S = S+[Pl]
         return 
     pm = (rPu-rPl)/(lPu-lPl)
-    print(rPu, lPu, rPl, lPl, pm)
+    print('rPu:',rPu,'lPu:', lPu,'rPl:', rPl, 'lPl:',lPl,'pm:', pm)
     for (u,v,w) in G.edges(data=True):
             w['f']=w['risk']-pm*w['len']
     ### 여기에서 'f'값을 기준으로 Pi를 뽑을 건데,
@@ -40,7 +40,7 @@ def sum_rec(Pu, Pl,S):
 
 
 # 70 nodes, 280 edges random graph
-G = nx.gnm_random_graph(70,180)
+G = nx.gnm_random_graph(10,40)
 
 # giving edges attributes 'len','risk' randomly
 # and initialize edges' attribute 'f' as 0
