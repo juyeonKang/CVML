@@ -36,8 +36,8 @@ def sum_rec(Pu, Pl,S):
             #print("before insert Pi, S = ",S)
             S = S+[Pi]
             #print("after insert Pi, S = ",S)
-            sum_rec(Pu, Pi,S)
-            sum_rec(Pi, Pl,S)
+            S = sum_rec(Pu, Pi,S)
+            S = sum_rec(Pi, Pl,S)
     #print('function return')
     return S
 
