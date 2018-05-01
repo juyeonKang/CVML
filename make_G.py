@@ -4,9 +4,14 @@ import sys
 import random
 import networkx as nx
 
-dim = int(sys.argv[1])
-node = int(sys.argv[2])
-edge = int(sys.argv[3])
+if len(sys.argv)==4:
+	dim = int(sys.argv[1])
+	node = int(sys.argv[2])
+	edge = int(sys.argv[3])
+else:
+	dim = 2
+	node = int(sys.argv[1])
+	edge = int(sys.argv[2])
 
 G = nx.gnm_random_graph(node,edge)
 
