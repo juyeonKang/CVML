@@ -22,5 +22,5 @@ for (u,v,w) in G.edges(data=True):
 	if dim == 3:
 		w['new'] = random.randint(20,100)
 
-filename = "Graph_"+str(node)+"_"+str(edge)+".gpickle"
+filename = str(dim)+"D_Graph_"+str(node)+"_"+str(edge)+".gpickle"
 nx.write_gpickle(G,filename)
